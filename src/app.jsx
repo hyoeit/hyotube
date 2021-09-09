@@ -1,10 +1,11 @@
 import "./app.css";
 import React, {useState, useEffect} from 'react';
 import Video_list from './components/video_list/video_list';
+import Header from './components/header/header';
 
 function App() {
   
-  const [videos, setVideos] = useState();
+  const [videos, setVideos] = useState([]);
 
   useEffect( () => {
     let requestOptions = {
@@ -19,7 +20,10 @@ function App() {
   }, [])
 
   return (
-    <Video_list videos={videos} />
+    <>
+      <Header />
+      <Video_list videos={videos} />
+    </>
   );
 }
 

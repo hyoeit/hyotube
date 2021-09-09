@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Video_item = (props) => {
+const Video_item = ({video}) => {
   return (
     <div>
-      <h1>{props.video.snippet.title}</h1>
+      <h1>{video.snippet.title}</h1>
     </div>
   )
 }

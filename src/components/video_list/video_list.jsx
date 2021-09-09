@@ -1,9 +1,9 @@
 import React from 'react'
 import Video_item from '../video_item/video_item'
 
-const Video_list = (props) => (
+const Video_list = ({videos}) => (
   <ul>
-    {props.videos.map(video => <Video_item key={video.id} video={video} />)}
+    {videos.map(video => <Video_item key={video.id} video={video} />)}
   </ul>
 )
 
