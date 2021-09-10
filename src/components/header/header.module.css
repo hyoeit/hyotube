@@ -10,7 +10,8 @@
 .icon {
   display: block;
   color: red;
-  font-size: 4rem;
+  width: 5rem;
+  height: 100px;
   margin-right: 1rem;
 }
 

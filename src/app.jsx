@@ -19,9 +19,22 @@ function App() {
       .catch(error => console.log('error', error));
   }, [])
 
+
+  const search = (value) => {
+    let requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs&key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs&part=snippet&maxResults=25&q=${value}&type=video&key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs", requestOptions`)
+      .then(response => response.json())
+      .then(result => setVideos(result.items))
+      .catch(error => console.log('error', error));
+  }
+
   return (
     <>
-      <Header />
+      <Header search={search} />
       <Video_list videos={videos} />
     </>
   );

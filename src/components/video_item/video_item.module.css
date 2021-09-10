@@ -1,0 +1,15 @@
+.lists {
+  list-style: none;
+  display: flex;
+  border: 0.2px solid rgba(125, 123, 123, 0.927);
+  margin-bottom: 0.2rem;
+  width: 50%;
+}
+
+.youtubeimg {
+  margin-right: 1rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
