@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/hyotube/static/css/main.76d95050.chunk.css",
+    "main.js": "/hyotube/static/js/main.36bdcf18.chunk.js",
+    "main.js.map": "/hyotube/static/js/main.36bdcf18.chunk.js.map",
+    "runtime-main.js": "/hyotube/static/js/runtime-main.d09868bf.js",
+    "runtime-main.js.map": "/hyotube/static/js/runtime-main.d09868bf.js.map",
+    "static/js/2.a4319e7e.chunk.js": "/hyotube/static/js/2.a4319e7e.chunk.js",
+    "static/js/2.a4319e7e.chunk.js.map": "/hyotube/static/js/2.a4319e7e.chunk.js.map",
+    "index.html": "/hyotube/index.html",
+    "static/css/main.76d95050.chunk.css.map": "/hyotube/static/css/main.76d95050.chunk.css.map",
+    "static/js/2.a4319e7e.chunk.js.LICENSE.txt": "/hyotube/static/js/2.a4319e7e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d09868bf.js",
+    "static/js/2.a4319e7e.chunk.js",
+    "static/css/main.76d95050.chunk.css",
+    "static/js/main.36bdcf18.chunk.js"
+  ]
+}
