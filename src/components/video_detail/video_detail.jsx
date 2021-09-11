@@ -2,14 +2,25 @@ import React from 'react'
 import styles from './video_detail.module.css'
 
 const Video_detail = ({video})=> {
+
+  console.log(video)
+
   return (
-    <li className={styles.lists} >
-    <img className={styles.youtubeimg} src={video.snippet.thumbnails.medium.url} alt="thumnail" />
-    <div className={styles.textbox}>
-      <h2 className={styles.title}>{video.snippet.title}</h2>
-      <p className={styles.channel}>{video.snippet.channelTitle}</p>
-    </div>
-  </li>
+    <section>
+      <iframe
+        className={styles.video} 
+        title="youtubeIframe"
+        id="ytplayer" 
+        type="text/html" 
+        width="100%" 
+        height="900"
+        src={`https://www.youtube.com/embed/${video.id}`}
+        frameBorder="0" 
+        allowFullScreen
+      ></iframe>
+      <h2 className={styles.title} >{video.snippet.title}</h2>
+      <h3 className={styles.channel} >{video.snippet.channelTitle}</h3>
+    </section>
   )
   }
 

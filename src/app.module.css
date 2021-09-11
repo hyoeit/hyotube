@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+}
+
+.videodetail {
+  flex: 1 1 70%;
+  /* flex-basis: 70%;
+    flex: 1(grow) 1(shrink) 이 없으면 화면이 찌그러짐. 왜 그런지 생각하기
+    -> grow 증가배분량 / shrink는 축소량. list와 detain이 같은 값을 가지고있으면 같은 영역을 차지한다.
+    
+    flex-basis의 기본값은 auto입니다만 단축 속성인 flex에서 그 값을 생략할 경우 0이 적용됩니다.
+    다시 정리하면 flex: 1; 혹은 flex: 1 1;은 flex: 1 1 0;이 된다는 것입니다.
+    이 부분을 기억하지 않으면 엉뚱한 결과가 나올 수 있으니 주의합시다!
+  */
+}
+
+.videolist {
+  flex: 1 1 30%;
+  /* flex-basis: 30%; */
+}
