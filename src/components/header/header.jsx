@@ -2,8 +2,7 @@ import React, {useRef, memo} from 'react'
 import styles from './header.module.css'
 import { FaYoutube, FaSearch } from "react-icons/fa";
 
-const Header = memo(
-  ({search}) => {
+const Header = memo(({search}) => {
 
     const doSearch = () => {
       const value = inputRef.current.value;
