@@ -3,33 +3,19 @@ import React, {useState, useEffect} from 'react';
 import Video_list from './components/video_list/video_list';
 import Header from './components/header/header';
 
-function App() {
+function App({youtube}) {
   
   const [videos, setVideos] = useState([]);
 
   useEffect( () => {
-    let requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch("https://www.googleapis.com/youtube/v3/videos?key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs&part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs", requestOptions)
-      .then(response => response.json())
-      .then(result => setVideos(result.items))
-      .catch(error => console.log('error', error));
+    youtube.mostPopular()//
+    .then((items) => setVideos(items));
   }, [])
 
 
   const search = (value) => {
-    let requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs&key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs&part=snippet&maxResults=25&q=${value}&type=video&key=AIzaSyAC6ynS06PUlJjXrl5XToBXGCU2aYrCMEs", requestOptions`)
-      .then(response => response.json())
-      .then(result => setVideos(result.items))
-      .catch(error => console.log('error', error));
+    youtube.search(value)//
+    .then((items) => setVideos(items));
   }
 
   return (
